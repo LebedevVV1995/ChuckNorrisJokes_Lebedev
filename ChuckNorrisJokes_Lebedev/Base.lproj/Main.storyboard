@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K3i-36-Yo0">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--JOKES-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChuckNorrisJokes_Lebedev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kji-FU-qB5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Jokes" id="oP9-Am-13i"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lq-Zx-mPW" userLabel="MyContentView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMG-eh-SHX">
+                                        <rect key="frame" x="179" y="671" width="56" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="F3s-ce-wEk"/>
+                                        </constraints>
+                                        <state key="normal" title="LOAD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OC9-KU-O19"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input count of jokes..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="coB-Rb-aEj">
+                                        <rect key="frame" x="126.5" y="609" width="161" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="fyY-D3-Lr3"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hia-3J-4KR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="577"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mCell" rowHeight="80" id="eHf-gq-m5d" customClass="MyTableViewCell" customModule="ChuckNorrisJokes_Lebedev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eHf-gq-m5d" id="gFE-A5-LdO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JokesLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cq-CN-HDr">
+                                                            <rect key="frame" x="0.0" y="8" width="414" height="64"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="6Cq-CN-HDr" secondAttribute="bottom" constant="8" id="0h5-ZM-Phz"/>
+                                                        <constraint firstItem="6Cq-CN-HDr" firstAttribute="leading" secondItem="gFE-A5-LdO" secondAttribute="leading" id="7dq-0Q-0KQ"/>
+                                                        <constraint firstItem="6Cq-CN-HDr" firstAttribute="top" secondItem="gFE-A5-LdO" secondAttribute="top" constant="8" id="Qi0-jQ-EjN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Cq-CN-HDr" secondAttribute="trailing" id="f7b-Ok-ExH"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="jokesLabel" destination="6Cq-CN-HDr" id="ZZj-Mm-EkV"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="JFb-gU-8cX"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="DLf-Z8-0JX"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hia-3J-4KR" firstAttribute="top" secondItem="3Lq-Zx-mPW" secondAttribute="top" id="9pk-nD-941"/>
+                                    <constraint firstItem="dMG-eh-SHX" firstAttribute="centerX" secondItem="3Lq-Zx-mPW" secondAttribute="centerX" id="BE6-Yj-VsO"/>
+                                    <constraint firstItem="coB-Rb-aEj" firstAttribute="centerX" secondItem="3Lq-Zx-mPW" secondAttribute="centerX" id="Ec2-gK-B4n"/>
+                                    <constraint firstItem="dMG-eh-SHX" firstAttribute="top" secondItem="coB-Rb-aEj" secondAttribute="bottom" constant="30" id="NHg-7H-6tM"/>
+                                    <constraint firstItem="coB-Rb-aEj" firstAttribute="top" secondItem="Hia-3J-4KR" secondAttribute="bottom" constant="32" id="ThB-69-6lx"/>
+                                    <constraint firstAttribute="bottom" secondItem="dMG-eh-SHX" secondAttribute="bottom" constant="24" id="lDd-ld-Evn"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hia-3J-4KR" secondAttribute="trailing" id="tTV-oM-szL"/>
+                                    <constraint firstItem="Hia-3J-4KR" firstAttribute="leading" secondItem="3Lq-Zx-mPW" secondAttribute="leading" id="vND-HA-3dh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Lq-Zx-mPW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9rF-lz-hBh"/>
+                            <constraint firstItem="kji-FU-qB5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kk4-rh-kD9"/>
+                            <constraint firstItem="3Lq-Zx-mPW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UFk-ar-GHm"/>
+                            <constraint firstItem="kji-FU-qB5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yfa-sE-aQ3"/>
+                            <constraint firstItem="3Lq-Zx-mPW" firstAttribute="top" secondItem="kji-FU-qB5" secondAttribute="bottom" id="ckH-0b-00Y"/>
+                            <constraint firstItem="kji-FU-qB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nLx-aX-37c"/>
+                            <constraint firstAttribute="bottom" secondItem="3Lq-Zx-mPW" secondAttribute="bottom" constant="83" id="qSx-5t-esY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="JOKES" image="FirstItem" id="LcP-40-7bM"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="qSx-5t-esY" id="Hdi-TZ-El9"/>
+                        <outlet property="countField" destination="coB-Rb-aEj" id="ttW-gf-VaY"/>
+                        <outlet property="loadBtn" destination="dMG-eh-SHX" id="fZD-uZ-1Rk"/>
+                        <outlet property="mTableView" destination="Hia-3J-4KR" id="hAg-VM-QCo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--API-->
+        <scene sceneID="sp7-h4-NUd">
+            <objects>
+                <viewController id="Rnz-SK-hwn" customClass="ApiViewController" customModule="ChuckNorrisJokes_Lebedev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rDR-Hq-pth">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTS-3A-JLf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="API" id="JNJ-dw-HMb"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJN-QL-gEa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VJN-QL-gEa" firstAttribute="leading" secondItem="LNh-cw-R22" secondAttribute="leading" id="Jhn-un-Znd"/>
+                            <constraint firstItem="WTS-3A-JLf" firstAttribute="leading" secondItem="LNh-cw-R22" secondAttribute="leading" id="Yp0-Cb-MKN"/>
+                            <constraint firstItem="VJN-QL-gEa" firstAttribute="bottom" secondItem="LNh-cw-R22" secondAttribute="bottom" id="Zwu-TB-gUC"/>
+                            <constraint firstItem="VJN-QL-gEa" firstAttribute="trailing" secondItem="LNh-cw-R22" secondAttribute="trailing" id="heZ-22-GSf"/>
+                            <constraint firstItem="WTS-3A-JLf" firstAttribute="top" secondItem="LNh-cw-R22" secondAttribute="top" id="k2T-b5-vil"/>
+                            <constraint firstItem="VJN-QL-gEa" firstAttribute="top" secondItem="WTS-3A-JLf" secondAttribute="bottom" id="wr8-B8-amu"/>
+                            <constraint firstItem="WTS-3A-JLf" firstAttribute="trailing" secondItem="LNh-cw-R22" secondAttribute="trailing" id="y3s-2g-Iqt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LNh-cw-R22"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="API" image="SecondItem" id="IH0-gq-HP5"/>
+                    <connections>
+                        <outlet property="webView" destination="VJN-QL-gEa" id="Hm8-G3-5BT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqR-6o-WIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.594202898551" y="118.52678571428571"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UGf-V1-Abc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="K3i-36-Yo0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nw6-ZX-FTR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9v4-eP-2kq"/>
+                        <segue destination="Rnz-SK-hwn" kind="relationship" relationship="viewControllers" id="gkb-jf-2F1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gT-wf-QPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FirstItem" width="30" height="30"/>
+        <image name="SecondItem" width="30" height="30"/>
+    </resources>
+</document>

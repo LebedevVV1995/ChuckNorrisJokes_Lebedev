@@ -1,0 +1,6 @@
+framework module Pods_ChuckNorrisJokes_Lebedev {
+  umbrella header "Pods-ChuckNorrisJokes_Lebedev-umbrella.h"
+
+  export *
+  module * { export * }
+}
